@@ -1,0 +1,57 @@
+# Strategic Product Placement Analysis
+
+## 1. Problem Statement
+The goal of this project is to analyze the performance and efficiency of Product Placement to provide actionable insights. By evaluating factors like store position, promotions, seasonal trends, and foot traffic, we aim to understand what drives a product's sales volume and how product positioning impacts overall sales.
+
+## 2. Data Collection & Connection
+- **Data Source:** The dataset "Impact of Product Positioning on Sales" was acquired from Kaggle (https://www.kaggle.com/datasets/amitvkulkarni/impact-of-product-positioning-on-sales).
+- **Connecting to Tableau:** The CSV dataset was downloaded, extracted, and imported into Tableau. After loading, the data source tab was reviewed to check column headers, correct data types, and ensure there were no null values or formatting errors.
+
+## 3. Data Preparation & Cleaning
+Preparing the data for visualization involved the following steps:
+- **Data Review & Exploration:** Checked data types, value ranges, and distributions to identify potential outliers and understand the structure.
+- **Filtering and Structuring:** Structured the data to match the visualization goals, ensuring relevance and clarity.
+- **Field Renaming & Final Formatting:** Ensured field names were intuitive and consistent, checking for proper data types (e.g., numeric values for sales and price).
+- **Calculated Fields:** Created calculated fields to support deeper analysis. The key calculation fields utilized were:
+  - `Price`
+  - `Competitors Price`
+  - `Sales Volume`
+
+## 4. Data Visualizations
+Eight unique visualizations were created to analyze different aspects of the data:
+1. **Sales Volume vs Product Category (Bar Chart):** Compares the total sales volume across Clothing, Electronics, and Food.
+2. **Avg Sales Volume by Product Category by Season (Stacked Bar Chart):** Shows the breakdown of average sales based on seasonal vs. non-seasonal factors within each product category.
+3. **Consumer Demographics vs Sales Volume (Pie Chart):** Visualizes the proportion of total sales volume contributed by different demographic groups (College students, Families, Seniors, Young adults).
+4. **Competitor Price Vs Price (Scatter Plot):** Analyzes the relationship between our price against the competitor's price.
+5. **Promotion of Product Category on Price and Sales Volume (Text Table):** A crosstab displaying how promotions (Yes/No) affect the average price and average sales volume for each category.
+6. **Foot Traffic by Avg Sales Volume (Packed Bubble Chart):** Illustrates the relationship between foot traffic (High, Medium, Low), product position, and average sales volume.
+7. **Product Category vs Price (Pie Chart):** Shows the average price distribution among different product categories.
+8. **Avg Sales Volume by Product Position and Product Category (Grouped Bar Chart):** Compares average sales volume based on product positioning (Aisle, End-cap, Front of Store) broken down by category.
+
+## 5. Dashboard Design and Interactivity
+- **Design & Responsiveness:** The views were pulled into a single, comprehensive dashboard titled "PRODUCT PLACEMENT ANALYSIS-DASHBOARD". Key considerations included user-centered design, clear information layout, and a data-driven approach.
+- **Interactivity & Filters:** Global filters were implemented to allow users to refine and focus on specific subsets of data. The filters included:
+  - `Product Category`
+  - `Product Position`
+  - `Consumer Demographics`
+  - `Promotion`
+  - `Seasonal`
+  - `Foot Traffic`
+
+## 6. Data Storytelling
+A storyboard was created to present the data and analysis in a narrative format, breaking down the insights into three scenes:
+- **Story Scene-1:** Focuses on the overall category performance. Caption: "The Product Category Clothing has highest Average sales volume." (Visual: Bar Chart).
+- **Story Scene-2:** Highlights the impact of foot traffic and positioning. Caption: "The Product position at the Front of store as High sales volume and high foot traffic." (Visual: Packed Bubble Chart).
+- **Story Scene-3:** Combines category and positioning for a final insight. Caption: "The Product Category clothing at front of store has highest avg sales volume." (Visual: Tree Map).
+
+## 7. Web Integration (Flask Embed)
+The final Tableau Dashboard and Story were published to Tableau Public. To integrate this into a web application:
+- The embedded code was copied from the "Share" option in Tableau Public.
+- A Flask web application with a Bootstrap UI template was conceptualized.
+- The embed codes for both the Dashboard and the Story were pasted into the Bootstrap template, allowing users to interact with the visualizations directly within the web application.
+
+## 8. Results & Findings
+- **Top Category:** Clothing generates the highest average sales volume compared to Electronics and Food.
+- **Product Placement:** Products placed at the "Front of Store" experience high foot traffic and correspondingly high sales volumes.
+- **Optimal Strategy:** Combining the top category and placement, "Clothing at the front of store" yields the highest overall average sales volume.
+- **Demographics:** Sales are distributed among various demographics, requiring targeted strategies based on the consumer group.
